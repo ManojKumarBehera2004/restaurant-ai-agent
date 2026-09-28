@@ -106,3 +106,12 @@ To avoid vendor lock-in, the codebase relies solely on `BaseLLMService`. Replaci
 - **Zero-Secret Logging**: `JsonFormatter` applies regex sanitization to scrub API keys, authorization bearer tokens, and passwords from logs.
 - **Trace Viewer**: Real-time in-memory and database audit logging tracking tool execution latency and status.
 - **Customer Data Boundary**: Direct SQL or bulk harvesting queries are blocked at both application-level regex and repository queries.
+
+---
+
+### 4. Assumptions & System Boundaries
+
+- **Authentication Assumption:** User context is mapped via `session_id` and verified operational order IDs rather than a live external SSO/OAuth2 provider.
+- **RAG Embedding Space:** Uses ChromaDB with cosine distance indexing and dual embedding support (Gemini + SHA-256 TF-IDF fallback).
+- **Payment & Refund Execution:** Order status and financial records are persisted in SQLite; live bank transfers are gated behind operational ticket approvals.
+

@@ -227,10 +227,30 @@ To build and run using Docker:
 ```bash
 docker-compose up --build
 ```
-Access the application at `http://localhost:8000`.
+---
+
+## ⚠️ Assumptions, Known Limitations & Incomplete Functionality
+
+As required by Section 8 of the assessment specification, here is an explicit, transparent documentation of all system assumptions, current limitations, and future roadmap scopes:
+
+### 1. Key Assumptions
+- **Single-Brand Operations:** The knowledge base and policies are configured for a single restaurant entity (*Gourmet Bistro & Kitchen*). Multi-chain/franchise multi-tenancy would require tenant ID partitioning in ChromaDB metadata.
+- **Session Identity Mapping:** For demonstration purposes, customer context is identified via `session_id` and optional `customer_id` payload. In enterprise production, this would integrate with an OAuth2 / JWT authorization service.
+- **Mock Payment Gateway:** Payment transactions and refund updates are simulated through the operational database layer rather than a live Stripe/Adyen webhook connection.
+
+### 2. Known Limitations
+- **Embedded Vector Database:** The local instance uses ChromaDB in persistent embedded mode on local disk. For a multi-node horizontal deployment, an external managed vector store (e.g., Qdrant, Pinecone, or pgvector) should be connected.
+- **Text-Only Modality:** The interface supports rich text, markdown, and structured REST JSON payloads. Voice/telephony input (Speech-to-Text / Audio streaming) is not included in this release.
+- **Simulated Notification Dispatch:** Support ticket alerts log structured audit events to stdout and database tables rather than dispatching real SMS/Email via Twilio or SendGrid.
+
+### 3. Incomplete / Future Scope
+- **Automated Live Bank Wire Refunds:** Currently, refund requests update the order state to `REFUNDED` and open a high-priority ticket for financial triage; direct automated bank wire execution is intentionally gated to prevent unauthorized fund transfers without human review.
+- **Interactive Live Map Tracking Widget:** Courier tracking provides driver name, phone number, and ETA in minutes; an interactive live GPS map widget is left as future frontend enhancement.
+- **Multi-lingual Policy RAG:** Current knowledge base policies are provided in English; multilingual cross-lingual embeddings can be added for international deployments.
 
 ---
 
 ## 📄 License & Assessment Information
 Developed for **Tenacious Techies Private Limited** AI Automation & Agents Developer Assessment.
 Designed for maintainability, explainability, and production deployment.
+
