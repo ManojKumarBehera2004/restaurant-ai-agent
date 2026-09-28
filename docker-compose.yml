@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  restaurant-ai-agent:
+    build: .
+    container_name: restaurant-ai-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=AI Restaurant Support & Operations Agent
+      - LLM_PROVIDER=gemini
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=gemini-1.5-flash
+      - DATABASE_URL=sqlite:///./data/restaurant_ops.db
+      - CHROMA_PERSIST_DIR=./data/chroma_db
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

@@ -1,0 +1,163 @@
+[
+  {
+    "id": "ORD-1001",
+    "customer_id": "CUST-001",
+    "customer_name": "Alex Johnson",
+    "customer_phone": "+1-555-0101",
+    "status": "DELIVERED",
+    "items": [
+      {"name": "Wood-Fired Margherita Pizza", "quantity": 1, "unit_price": 18.50, "special_instructions": "Extra basil"},
+      {"name": "Truffle Parmesan Fries", "quantity": 1, "unit_price": 8.00, "special_instructions": "Dip on the side"}
+    ],
+    "subtotal": 26.50,
+    "tax": 2.38,
+    "delivery_fee": 3.99,
+    "total": 32.87,
+    "delivery_address": "742 Evergreen Terrace, Springfield",
+    "delivery_partner": "Dave Miller (+1-555-0988)",
+    "estimated_delivery_minutes": 0,
+    "payment_status": "PAID",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1002",
+    "customer_id": "CUST-002",
+    "customer_name": "Sarah Connor",
+    "customer_phone": "+1-555-0102",
+    "status": "OUT_FOR_DELIVERY",
+    "items": [
+      {"name": "Salmon Deluxe Sushi Combo (16 pcs)", "quantity": 1, "unit_price": 28.00, "special_instructions": "Low sodium soy sauce"},
+      {"name": "Miso Soup", "quantity": 2, "unit_price": 4.50, "special_instructions": null}
+    ],
+    "subtotal": 37.00,
+    "tax": 3.33,
+    "delivery_fee": 4.50,
+    "total": 44.83,
+    "delivery_address": "1204 Cyber Way, Tech District",
+    "delivery_partner": "Mike Vance (+1-555-0321)",
+    "estimated_delivery_minutes": 12,
+    "payment_status": "PAID",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1003",
+    "customer_id": "CUST-001",
+    "customer_name": "Alex Johnson",
+    "customer_phone": "+1-555-0101",
+    "status": "PREPARING",
+    "items": [
+      {"name": "Double Smash Burger", "quantity": 2, "unit_price": 14.50, "special_instructions": "No pickles, medium well"},
+      {"name": "Sweet Potato Fries", "quantity": 1, "unit_price": 7.00, "special_instructions": null}
+    ],
+    "subtotal": 36.00,
+    "tax": 3.24,
+    "delivery_fee": 3.50,
+    "total": 42.74,
+    "delivery_address": "742 Evergreen Terrace, Springfield",
+    "delivery_partner": "Assigned - Waiting for pickup",
+    "estimated_delivery_minutes": 25,
+    "payment_status": "PAID",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1004",
+    "customer_id": "CUST-003",
+    "customer_name": "Michael Scott",
+    "customer_phone": "+1-555-0103",
+    "status": "RECEIVED",
+    "items": [
+      {"name": "Fettuccine Alfredo with Grilled Chicken", "quantity": 1, "unit_price": 21.00, "special_instructions": "Extra parmesan cheese"},
+      {"name": "Garlic Dough Knots (6 pcs)", "quantity": 1, "unit_price": 6.50, "special_instructions": "Warm"}
+    ],
+    "subtotal": 27.50,
+    "tax": 2.48,
+    "delivery_fee": 3.50,
+    "total": 33.48,
+    "delivery_address": "1725 Slough Avenue, Scranton",
+    "delivery_partner": "Pending kitchen acceptance",
+    "estimated_delivery_minutes": 40,
+    "payment_status": "PAID",
+    "can_cancel": true
+  },
+  {
+    "id": "ORD-1005",
+    "customer_id": "CUST-001",
+    "customer_name": "Alex Johnson",
+    "customer_phone": "+1-555-0101",
+    "status": "OUT_FOR_DELIVERY",
+    "items": [
+      {"name": "Smoked Texas BBQ Ribs Platter", "quantity": 1, "unit_price": 32.00, "special_instructions": "Extra BBQ sauce on side"},
+      {"name": "Coleslaw & Cornbread", "quantity": 1, "unit_price": 6.00, "special_instructions": null},
+      {"name": "Iced Lemon Tea (500ml)", "quantity": 2, "unit_price": 4.00, "special_instructions": "Less ice"}
+    ],
+    "subtotal": 46.00,
+    "tax": 4.14,
+    "delivery_fee": 4.99,
+    "total": 55.13,
+    "delivery_address": "742 Evergreen Terrace, Springfield",
+    "delivery_partner": "Carlos Gomez (+1-555-0812)",
+    "estimated_delivery_minutes": 8,
+    "payment_status": "PAID",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1006",
+    "customer_id": "CUST-004",
+    "customer_name": "Emily Watson",
+    "customer_phone": "+1-555-0104",
+    "status": "FAILED",
+    "items": [
+      {"name": "Crispy Chicken Tenders Basket", "quantity": 1, "unit_price": 16.00, "special_instructions": "Honey mustard sauce"},
+      {"name": "Oreo Milkshake", "quantity": 1, "unit_price": 7.50, "special_instructions": "Extra whipped cream"}
+    ],
+    "subtotal": 23.50,
+    "tax": 2.11,
+    "delivery_fee": 3.50,
+    "total": 29.11,
+    "delivery_address": "88 Riverside Blvd, Apt 4B",
+    "delivery_partner": null,
+    "estimated_delivery_minutes": null,
+    "payment_status": "PAID",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1007",
+    "customer_id": "CUST-005",
+    "customer_name": "David Kim",
+    "customer_phone": "+1-555-0105",
+    "status": "CANCELLED",
+    "items": [
+      {"name": "Green Thai Coconut Curry", "quantity": 1, "unit_price": 19.50, "special_instructions": "Spicy level 4"},
+      {"name": "Jasmine Rice Bowl", "quantity": 1, "unit_price": 4.00, "special_instructions": null}
+    ],
+    "subtotal": 23.50,
+    "tax": 2.12,
+    "delivery_fee": 3.50,
+    "total": 29.12,
+    "delivery_address": "300 Pinewood Lane, Suite 100",
+    "delivery_partner": null,
+    "estimated_delivery_minutes": null,
+    "payment_status": "REFUNDED",
+    "can_cancel": false
+  },
+  {
+    "id": "ORD-1008",
+    "customer_id": "CUST-006",
+    "customer_name": "Jane Smith",
+    "customer_phone": "+1-555-0106",
+    "status": "PREPARING",
+    "items": [
+      {"name": "Street Style Birria Tacos (3 pcs)", "quantity": 2, "unit_price": 15.00, "special_instructions": "Extra consomme broth"},
+      {"name": "Fresh Tortilla Chips & Guacamole", "quantity": 1, "unit_price": 9.50, "special_instructions": "No onions"}
+    ],
+    "subtotal": 39.50,
+    "tax": 3.55,
+    "delivery_fee": 4.00,
+    "total": 47.05,
+    "delivery_address": "55 Ocean Avenue, Apt 12",
+    "delivery_partner": "Assigned - Waiting for pickup",
+    "estimated_delivery_minutes": 22,
+    "payment_status": "PAID",
+    "can_cancel": false
+  }
+]
