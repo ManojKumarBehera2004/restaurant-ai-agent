@@ -59,11 +59,10 @@ cd restaurant-ai-agent
 ### 2. Create Virtual Environment & Install Dependencies
 ```bash
 python -m venv venv
-# On Windows:
-.\venv\Scripts\activate
-# On Linux/macOS:
+#Windows:
+source venv/Scripts/activate
+# MacOS/Linux:
 source venv/bin/activate
-
 pip install -r requirements.txt
 ```
 
